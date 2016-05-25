@@ -1,3 +1,3 @@
 # exifextract_W
 Extract exifdata from multiple images
-This program uses libimage-exiftool-perl/8.60-2
+Dit programma maakt gebruik van ExifTool by Phil Harvey http://www.sno.phy.queensu.ca/~phil/exiftool/
