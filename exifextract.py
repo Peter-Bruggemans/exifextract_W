@@ -31,6 +31,7 @@ result=check_output(osbronregel, shell=True)
 # verdeel het resultaat in regels
 lines = result.split('\r\n')
 # maak de doelinstructieregel aan per broninstructieregel
+print "Start writing..."
 for line in lines:
     if len(line) > 0:
         # bouw de doelinstructieregel
@@ -38,6 +39,10 @@ for line in lines:
         # pas de broninstructieregel aan aan het os(/ wordt \) en voeg de opties toe(/ moet blijven)
         osdoelregel = (os.path.normpath(doelregel)) + " " + doeloptie
         # laat de doelinstructieregel zien
-        print (osdoelregel)
+        #print (osdoelregel)
         # voer de doelinstructieregel uit
         result2 = check_output(osdoelregel, shell=True)
+        teller = lines.index(line) + 1
+        print str(teller) + " row(s) written"
+        
+print "Finished"
